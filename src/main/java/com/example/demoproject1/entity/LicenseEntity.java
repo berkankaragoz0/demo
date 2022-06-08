@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Table(name = "license")
 @Entity(name = "license")
-public class LicenseEntity {
+public class LicenseEntity extends AuditEntity {
     @Id
     @SequenceGenerator(name = "seq_licenses", allocationSize = 1)
     @GeneratedValue(generator = "seq_licenses",strategy = GenerationType.IDENTITY)

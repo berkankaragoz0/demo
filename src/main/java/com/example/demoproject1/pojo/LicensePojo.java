@@ -1,6 +1,6 @@
 package com.example.demoproject1.pojo;
 
-public class LicensePojo {
+public class LicensePojo extends AuditPojo{
     private int id;
     private String name;
 
@@ -33,4 +33,5 @@ public class LicensePojo {
     public void setName(String name) {
         this.name = name;
     }
+
 }

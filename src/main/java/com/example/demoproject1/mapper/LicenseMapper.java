@@ -32,4 +32,28 @@ public class LicenseMapper {
         }
         return pojo;
     }
+
+    public static List<LicenseEntity> pojoToEntity(List<LicensePojo> pojoList){
+
+        List<LicenseEntity> mappedList = new ArrayList<LicenseEntity>();
+        LicenseEntity entity;
+        if(pojoList != null){
+            for (LicensePojo pojo : pojoList){
+                entity = pojoToEntity(pojo);
+                mappedList.add(entity);
+            }
+        }
+
+        return mappedList;
+    }
+    public static LicenseEntity pojoToEntity(LicensePojo pojo){
+        LicenseEntity entity = null;
+
+        if (pojo != null){
+            entity = new LicenseEntity();
+            entity.setId(pojo.getId());
+            entity.setName(pojo.getName());
+        }
+        return entity;
+    }
 }

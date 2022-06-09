@@ -3,7 +3,6 @@ package com.example.demoproject1.service;
 import com.example.demoproject1.entity.LicenseEntity;
 import com.example.demoproject1.logic.LicenseFlow;
 import com.example.demoproject1.mapper.LicenseMapper;
-import com.example.demoproject1.pojo.AuditPojo;
 import com.example.demoproject1.pojo.LicensePojo;
 import com.example.demoproject1.repository.LicenseRepository;
 import com.example.demoproject1.response.GlobalFunctions;
@@ -18,7 +17,7 @@ import java.util.List;
 @RequestMapping("/license")
 @EnableAutoConfiguration
 @CrossOrigin
-public class LicenseService extends AuditPojo {
+public class LicenseService{
     @Autowired
     LicenseRepository licenseRepository;
     @Autowired

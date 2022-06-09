@@ -1,7 +1,9 @@
 package com.example.demoproject1.mapper;
 
 import com.example.demoproject1.entity.ContentEntity;
+import com.example.demoproject1.entity.LicenseEntity;
 import com.example.demoproject1.pojo.ContentPojo;
+import com.example.demoproject1.pojo.LicensePojo;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -29,5 +31,28 @@ public class ContentMapper {
             pojo.setName(entity.getName());
         }
         return pojo;
+    }
+    public static List<ContentEntity> pojoToEntity(List<ContentPojo> pojoList){
+
+        List<ContentEntity> mappedList = new ArrayList<ContentEntity>();
+        ContentEntity entity;
+        if(pojoList != null){
+            for (ContentPojo pojo : pojoList){
+                entity = pojoToEntity(pojo);
+                mappedList.add(entity);
+            }
+        }
+
+        return mappedList;
+    }
+    public static ContentEntity pojoToEntity(ContentPojo pojo){
+        ContentEntity entity = null;
+
+        if (pojo != null){
+            entity = new ContentEntity();
+            entity.setId(pojo.getId());
+            entity.setName(pojo.getName());
+        }
+        return entity;
     }
 }

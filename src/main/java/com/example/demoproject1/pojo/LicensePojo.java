@@ -1,6 +1,6 @@
 package com.example.demoproject1.pojo;
 
-public class LicensePojo extends AuditPojo{
+public class LicensePojo {
     private int id;
     private String name;
 
